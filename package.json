@@ -22,8 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "copy": "rm -rf ../ohkeycaps.github.io/static/ && mv -f build/* ../ohkeycaps.github.io/",
+    "deploy": "npm run build && npm run copy"
   },
   "eslintConfig": {
     "extends": [
