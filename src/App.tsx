@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import Navigation from './components/navigation';
+import HexFileComponent from "./components/hexFiles";
+import FaqComponent from "./components/faq";
+import QmkKeymapsComponent from "./components/qmkKeymaps";
+import WiringTutorialComponent from "./components/wiring";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route path="/hex" exact component={HexFileComponent}/>
+        <Route path="/qmk" exact component={QmkKeymapsComponent}/>
+        <Route path="/wiring" exact component={WiringTutorialComponent}/>
+        <Route path="/faq" exact component={FaqComponent}/>
+      </Switch>
+    </Router>
   );
 }
 
