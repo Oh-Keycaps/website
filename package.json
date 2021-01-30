@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "copy": "rm -rf ../ohkeycaps.github.io/static/ && mv -f build/* ../ohkeycaps.github.io/",
+    "copy": "rm -rf ../oh-keycaps.github.io/static/ && mv -f build/* ../oh-keycaps.github.io/",
     "deploy": "npm run build && npm run copy"
   },
   "eslintConfig": {
