@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { TutorialLink, WiringService } from "services/wiringService";
-import './wiring.component.scss';
 
 const ImgurEmbedScript = (props: {dataId: string, title: string}) => {
   const {dataId, title} = props;
